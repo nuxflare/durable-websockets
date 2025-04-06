@@ -30,7 +30,7 @@ To deploy to Cloudflare Workers using Nuxflare:
 bun nuxflare deploy
 ```
 
-This will prompt you to create and set up a CLOUDFLARE_API_TOKEN if one isn't already configured.
+This will prompt you to create and set up a `CLOUDFLARE_API_TOKEN` if one isn't already configured.
 
 ## GitHub Actions
 
@@ -38,4 +38,4 @@ We've also used Nuxflare to automatically configure GitHub Actions for continuou
 
 With this preset, pushing to the main branch automatically deploys to the production environment.
 
-The production domain is configured through GitHub Actions using the PROD_DOMAIN environment variable.
+The production domain is configured through GitHub Actions using the `PROD_DOMAIN` environment variable.
