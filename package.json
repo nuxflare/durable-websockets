@@ -10,7 +10,15 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/ui": "^3.0.1",
+    "@vueuse/core": "^13.0.0",
     "nuxt": "^3.16.1",
     "vue": "latest"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250327.0",
+    "prettier": "^3.5.3",
+    "sst": "^3.12.3",
+    "wrangler": "^4.7.2"
   }
 }
