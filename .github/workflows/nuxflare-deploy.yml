@@ -1,11 +1,10 @@
 name: "Nuxflare Deploy"
 
 on:
-  
   push:
     branches:
       - main
-  
+
   workflow_dispatch:
     inputs:
       stage:
@@ -19,7 +18,7 @@ concurrency:
 jobs:
   deploy:
     if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
-    
+
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -35,7 +34,6 @@ jobs:
             .sst
           key: ${{ runner.os }}-sst
 
-      
       - name: Install Bun
         uses: oven-sh/setup-bun@v1
         with:
@@ -43,10 +41,10 @@ jobs:
 
       - name: Install deps
         run: bun install
-      
 
       - name: Deploy with SST.dev
         env:
+          PROD_DOMAIN: ${{ secrets.PROD_DOMAIN }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
           # Determine deployment mode based on event type and inputs

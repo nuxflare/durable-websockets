@@ -1,75 +1,41 @@
-# Nuxt 3 Minimal Starter
+# Nuxflare - Durable WebSockets
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A Nuxt real-time chat demo using Cloudflare Durable Objects for WebSockets, deployed with [Nuxflare](https://nuxflare.com).
 
-## Setup
+## Project Structure
 
-Make sure to install the dependencies:
+- A Nuxt application for the frontend
+- WebSocket functionality powered by Cloudflare Durable Objects
+- Nuxflare handling the deployment process
+
+## Local Development
+
+1. Install dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
 bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+2. Start the development server:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
 bun run dev
 ```
 
-## Production
+## Deployment
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
+To deploy to Cloudflare Workers using Nuxflare:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+bun nuxflare deploy
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+This will prompt you to create and set up a CLOUDFLARE_API_TOKEN if one isn't already configured.
+
+## GitHub Actions
+
+We've also used Nuxflare to automatically configure GitHub Actions for continuous deployment.
+
+With this preset, pushing to the main branch automatically deploys to the production environment.
+
+The production domain is configured through GitHub Actions using the PROD_DOMAIN environment variable.

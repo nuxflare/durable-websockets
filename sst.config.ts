@@ -1,5 +1,5 @@
 /// <reference path="./.sst/platform/config.d.ts" />
-const prodDomain = "websockets-demo.nuxflare.com";
+const prodDomain = process.env.PROD_DOMAIN || undefined;
 const devDomain = undefined;
 
 export default $config({
