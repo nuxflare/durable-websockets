@@ -1,6 +1,7 @@
 # Nuxflare - Durable WebSockets
 
 A Nuxt real-time chat demo using Cloudflare Durable Objects for WebSockets, deployed with [Nuxflare](https://nuxflare.com).
+See the [tutorial blog post](https://nuxflare.com/blog/durable-objects-nuxt-building-chat-app) for more details.
 
 ## Project Structure
 
